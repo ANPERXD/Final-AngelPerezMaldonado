@@ -10,7 +10,7 @@ const products = [{
     id: '2',
     name: 'ASUS',
     price: 1500,
-    category: 'notebokk',
+    category: 'notebook',
     img: '',
     stock: 50,
     description: ''
@@ -31,3 +31,21 @@ export const getProducts = () => {
         }, 500);
     })
 }
+
+export const getProductsById = (productId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === productId))
+        }, 500);
+    })
+}
+export const getProductsByCategory = (category) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const filteredProducts = products.filter((product) =>
+                product.category.toLowerCase() === category.toLowerCase()
+            );
+            resolve(filteredProducts);
+        }, 500);
+    });
+};
