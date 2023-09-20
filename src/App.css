@@ -16,7 +16,7 @@
   font-size: 2.5rem;
 }
 
-#cartWidget-Icon>img {
+.CartWidget>img {
   width: 2.5rem;
   height: auto;
 }
@@ -103,3 +103,4 @@
   justify-content: center;
   align-items: center;
 }
+

@@ -1,17 +1,18 @@
 import { createContext, useState } from "react";
 
 export const CartContext = createContext({
-    cart: []
-})
+    cart: [],
+    totalQuantity: 0,
+});
 
 export const CartProvider = ({ children }) => {
-    const [cart, setCart] = useState([])
-
-    console.log(cart);
+    const [cart, setCart] = useState([]);
+    const [totalQuantity, setTotalQuantity] = useState(0);
 
     const addItem = (item, quantity) => {
         if (!isInCart(item.id)) {
-            setCart(prev => [...prev, { ...item, quantity }])
+            setCart((prev) => [...prev, { ...item, quantity }]);
+            setTotalQuantity((prev) => prev + quantity);
         } else {
             console.error('El producto ya fue agregado');
         }
@@ -21,13 +22,15 @@ export const CartProvider = ({ children }) => {
         setCart(cartUpdated)
     }
     const clearCart = () => {
-        setCart([])
+        setTotalQuantity(0);
+        setCart([]);
     }
     const isInCart = (itemId) => {
         return cart.some(prod => prod.id === itemId)
     }
+    
     return (
-        <CartContext.Provider value={{ cart, addItem, removeItem, clearCart }}>
+        <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, totalQuantity }}>
             {children}
         </CartContext.Provider>
     )
