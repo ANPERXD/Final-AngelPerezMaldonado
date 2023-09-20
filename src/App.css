@@ -89,7 +89,7 @@
   border-radius: 0.5rem;
 }
 
-.CardItem>.ItemImg {
+img {
   width: 5rem;
   height: 5rem;
 }
