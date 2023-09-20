@@ -3,7 +3,6 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 
-
 const Cart = () => {
     const { cart, clearCart, totalQuantity } = useContext(CartContext);
     const [cartTotal, setCartTotal] = useState(0);
@@ -50,3 +49,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
