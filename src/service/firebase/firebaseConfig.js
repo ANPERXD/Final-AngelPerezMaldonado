@@ -2,13 +2,12 @@ import {initializeApp} from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCp69APMnFf43yaTVFGkOBISef4OA0w8vo",
-  authDomain: "projecto-anper.firebaseapp.com",
-  projectId: "projecto-anper",
-  storageBucket: "projecto-anper.appspot.com",
-  messagingSenderId: "115375218012",
-  appId: "1:115375218012:web:490a7da46c7f3ca79f7599",
-  measurementId: "G-TSVJRDXFMW"
+  apiKey: "AIzaSyAJalNc0p3Q8FlhhQCuUn4ZfV76QEVjkL0",
+  authDomain: "proyecto-final-coder-2cb7b.firebaseapp.com",
+  projectId: "proyecto-final-coder-2cb7b",
+  storageBucket: "proyecto-final-coder-2cb7b.appspot.com",
+  messagingSenderId: "948736925499",
+  appId: "1:948736925499:web:d4a0a62d34f8903927a11e"
 };
 
 const app = initializeApp(firebaseConfig);
