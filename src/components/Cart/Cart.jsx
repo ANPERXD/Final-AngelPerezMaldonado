@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 
 const Cart = () => {
-    const { cart, clearCart, totalQuantity, removeItem } = useContext(CartContext);
+    const { cart, clearCart, totalQuantity } = useContext(CartContext);
     const [cartTotal, setCartTotal] = useState(0);
     useEffect(() => {
         const total = cart.reduce((accumulator, product) => {
@@ -12,6 +12,7 @@ const Cart = () => {
         }, 0);
         setCartTotal(total);
     }, [cart]);
+
     if (totalQuantity === 0) {
         return (
             <div className="Cart-Zero">
@@ -44,4 +45,3 @@ const Cart = () => {
     );
 };
 export default Cart;
-
