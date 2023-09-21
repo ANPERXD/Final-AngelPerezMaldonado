@@ -13,39 +13,43 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
         }
         addItem(item, quantity)
     };
-
     return (
-        <article className="CardItem">
-            <header className="Header">
-                <h2 className="ItemHeader">
-                    {name}
-                </h2>
-            </header>
-            <picture className="Picture">
-                <img src={img} alt={name} className="ItemImg" />
+        <article className="CardItems">
+            <picture className="Pictures">
+                <img src={img} alt={name} className="ItemImgs" />
             </picture>
-            <section>
-                <p className="Info">
-                    Categoria : {category}
-                </p>
-                <p className="Info">
-                    Descripcion : {description}
-                </p>
-                <p className="Info">
-                    Precio: ${price}
-                </p>
-            </section>
-            <footer className="ItemFooter">
-                {
-                    quantityAdded > 0 ? (
-                        <Link to='/cart' className='Info-Cart'>Terminar Compra</Link>
-                    ) : (
-                        <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
-                    )
-                }
-            </footer>
+            <div>
+                <header className="Headers">
+                    <h2 className="ItemHeaders">
+                        {name}
+                    </h2>
+                </header>
+                <section className="Container-section">
+                    <p className="Infos">
+                        Categoria : {category}
+                    </p>
+                    <p className="Infos">
+                        Descripcion : {description}
+                    </p>
+                    <p className="Infos">
+                        Precio: ${price}
+                    </p>
+                    <p className="Infos">
+                        stock: {stock}
+                    </p>
+                </section>
+                <footer className="ItemFooters">
+                    {
+                        quantityAdded > 0 ? (
+                            <Link to='/cart' className='Info-Carts'>Terminar Compra</Link>
+                        ) : (
+                            <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                        )
+                    }
+                </footer>
+            </div>
         </article>
     );
 };
 
-export default ItemDetail
+export default ItemDetail;

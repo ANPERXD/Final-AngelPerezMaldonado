@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 
 const Cart = () => {
-    const { cart, clearCart, totalQuantity } = useContext(CartContext);
+    const { cart, clearCart, totalQuantity, removeItem } = useContext(CartContext);
     const [cartTotal, setCartTotal] = useState(0);
-
     useEffect(() => {
         const total = cart.reduce((accumulator, product) => {
             return accumulator + product.price * product.quantity;
@@ -23,7 +22,6 @@ const Cart = () => {
             </div>
         );
     };
-
     return (
         <div className="cart">
             {cart.map((product) => (
@@ -40,7 +38,7 @@ const Cart = () => {
                 Limpiar Carrito
             </button>
             <Link to="/checkout" className="checkout">
-                CheckOut
+                Finalizar compra
             </Link>
         </div>
     );

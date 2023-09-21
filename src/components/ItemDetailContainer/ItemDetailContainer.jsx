@@ -29,6 +29,6 @@ const ItemDetailContainer = () => {
         <div className="ItemDetailContainer">
             <ItemDetail {...product} />
         </div>
-    )
-}
+    );
+};
 export default ItemDetailContainer;

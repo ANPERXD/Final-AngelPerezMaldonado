@@ -61,8 +61,8 @@ const Checkout = () => {
         return <h1>El id de su orden es: {orderId}</h1>
     };
     return (
-        <div>
-            <h1>Checkout</h1>
+        <div id="RegisterAcount">
+            <h1>Registra tu cuenta</h1>
             <CheckoutForm onConfirm={createOrder} />
         </div>
     );

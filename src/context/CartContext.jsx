@@ -13,18 +13,22 @@ export const CartProvider = ({ children }) => {
             setTotalQuantity((prev) => prev + quantity);
         } else {
             console.error('El producto ya fue agregado');
-        }
+        };
     };
     const removeItem = (itemId) => {
-        const cartUpdated = cart.filter(prod => prod.id !== itemId)
-        setCart(cartUpdated)
+        const removedItem = cart.find((prod) => prod.id === itemId);
+        if (removedItem) {
+            const updatedCart = cart.filter((prod) => prod.id !== itemId);
+            setCart(updatedCart);
+            setTotalQuantity((prev) => prev - removedItem.quantity);
+        };
     };
     const clearCart = () => {
         setTotalQuantity(0);
         setCart([]);
     };
     const isInCart = (itemId) => {
-        return cart.some(prod => prod.id === itemId)
+        return cart.some((prod) => prod.id === itemId);
     };
 
     return (
