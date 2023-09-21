@@ -8,13 +8,13 @@ const NavBar = () => {
                 <h1 id="logo">Ecommerce-Anper</h1>
             </Link>
             <div id="Selections">
-                <NavLink className="link-category"  to={`/category/celular`}>Celulares</NavLink>
+                <NavLink className="link-category" to={`/category/celular`}>Celulares</NavLink>
                 <NavLink className="link-category" to={`/category/tablet`}>Tablets</NavLink>
                 <NavLink className="link-category" to={`/category/notebook`}>Notebooks</NavLink>
             </div>
             <CartWidget />
         </nav>
     );
-}
+};
 
 export default NavBar;

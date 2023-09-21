@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 const Item = ({ id, name, img, price, stock }) => {
     return (
         <article className="CardItem">
@@ -22,8 +23,6 @@ const Item = ({ id, name, img, price, stock }) => {
                 <Link to={`/item/${id}`} className="Info-Cart">Ver Detalles</Link>
             </footer>
         </article>
-    )
-}
-
+    );
+};
 export default Item;
-

@@ -4,10 +4,8 @@ const CheckoutForm = ({ onConfirm }) => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
-
     const handleConfirm = (event) => {
         event.preventDefault();
-
         const userData = {
             name,
             phone,
@@ -15,7 +13,6 @@ const CheckoutForm = ({ onConfirm }) => {
         };
         onConfirm(userData);
     };
-
     return (
         <div id="ContainerForm-div">
             <form id="ContainerForm" onSubmit={handleConfirm}>
@@ -38,5 +35,4 @@ const CheckoutForm = ({ onConfirm }) => {
         </div>
     );
 };
-
 export default CheckoutForm;

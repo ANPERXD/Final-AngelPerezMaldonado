@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import cart from "./assets/cart-shopping-svgrepo-com.svg";
+import cart from "./assets/cart-shopping.svg";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
@@ -12,6 +12,5 @@ const CartWidget = () => {
         </Link>
     );
 };
-
 
 export default CartWidget;

@@ -11,10 +11,8 @@ const Cart = () => {
         const total = cart.reduce((accumulator, product) => {
             return accumulator + product.price * product.quantity;
         }, 0);
-
         setCartTotal(total);
     }, [cart]);
-
     if (totalQuantity === 0) {
         return (
             <div className="Cart-Zero">
@@ -24,7 +22,7 @@ const Cart = () => {
                 </Link>
             </div>
         );
-    }
+    };
 
     return (
         <div className="cart">
@@ -47,6 +45,5 @@ const Cart = () => {
         </div>
     );
 };
-
 export default Cart;
 

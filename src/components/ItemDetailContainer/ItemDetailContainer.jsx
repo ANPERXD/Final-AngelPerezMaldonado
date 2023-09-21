@@ -5,15 +5,12 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../service/firebase/firebaseConfig";
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
-    const [loading, setLoading] = useState(true)
-
-    const { itemId } = useParams()
-
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const { itemId } = useParams();
     useEffect(() => {
         setLoading(true)
         const docRef = doc(db, 'products', itemId)
-
         getDoc(docRef)
             .then(response => {
                 const data = response.data()
@@ -26,7 +23,8 @@ const ItemDetailContainer = () => {
             .finally(() => {
                 setLoading(false)
             })
-    }, [itemId])
+    }, [itemId]);
+
     return (
         <div className="ItemDetailContainer">
             <ItemDetail {...product} />

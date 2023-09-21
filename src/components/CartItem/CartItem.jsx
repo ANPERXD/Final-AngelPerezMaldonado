@@ -1,5 +1,4 @@
-const CartItem = ({ id, name, price, quantity }) => {
-
+const CartItem = ({name, price, quantity }) => {
     return (
         <div className="CartItem">
             <h3>{name}</h3>

@@ -1,18 +1,18 @@
 import { useState } from "react";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-
     const [quantity, setQuantity] = useState(initial)
     const increment = () => {
         if (quantity < stock) {
             setQuantity(quantity + 1)
-        }
-    }
+        };
+    };
     const decrement = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1)
-        }
-    }
+        };
+    };
+    
     return (
         <div id="Counter">
             <div className="Controls">
@@ -26,7 +26,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default ItemCount
