@@ -6,10 +6,9 @@ import { db } from "../../service/firebase/firebaseConfig";
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null);
-    const [ setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const { itemId } = useParams();
     useEffect(() => {
-        setLoading(true); 
         const docRef = doc(db, 'products', itemId);
         getDoc(docRef)
             .then(response => {
@@ -21,15 +20,19 @@ const ItemDetailContainer = () => {
                 console.error(error);
             })
             .finally(() => {
-                setLoading(false); 
+                setLoading(false);
             });
-    }, [itemId, setLoading]);
-    
+    }, [itemId]);
 
     return (
         <div className="ItemDetailContainer">
-            <ItemDetail {...product} />
+            {loading ? (
+                <p>Cargando...</p>
+            ) : (
+                <ItemDetail {...product} />
+            )}
         </div>
     );
 };
+
 export default ItemDetailContainer;
