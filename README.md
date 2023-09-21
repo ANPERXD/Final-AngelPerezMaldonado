@@ -36,4 +36,3 @@ Si deseas contribuir al desarrollo de esta aplicación, ¡estamos abiertos a col
 
 ¡Disfruta explorando y comprando en Ecommerce-anper!
 
-![image](https://github.com/ANPERXD/Final-AngelPerezMaldonado/assets/123574050/9123e84f-4e9c-416b-b5e9-483197a3081d)
