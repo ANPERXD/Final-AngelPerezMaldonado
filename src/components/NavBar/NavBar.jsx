@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <nav id="NavBar">
             <Link to='/' className="link">
-                <h1 id="logo">Ecommerce</h1>
+                <h1 id="logo">Ecommerce-Anper</h1>
             </Link>
             <div id="Selections">
                 <NavLink className="link-category"  to={`/category/celular`}>Celulares</NavLink>
