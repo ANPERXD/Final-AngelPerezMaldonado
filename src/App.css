@@ -1,22 +1,43 @@
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+#logo {
+  font-size: 2rem;
+}
+
+.link-category {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.link-category:hover {
+  text-decoration: underline;
+}
+
 #NavBar {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   width: 100%;
   height: auto;
-  background-color: orange;
+  background-color: rgb(237, 237, 237);
+  border-bottom: 2px solid black;
   margin-bottom: 2rem;
 }
 
-.Button_NavBar {
-  font-size: 1.5rem;
+#CartWidget {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: auto;
 }
 
-#NavBar>h1 {
-  font-size: 2.5rem;
-}
-
-.CartWidget>img {
+#CartWidget>img {
   width: 2.5rem;
   height: auto;
 }
@@ -33,29 +54,28 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
-  background-color: orange;
+  height: 8rem;
 }
 
 #Counter>.Controls {
   display: flex;
   flex-direction: row;
-  width: 10rem;
-  justify-content: space-evenly;
+  width: 100%;
+  height: 5rem;
   align-items: center;
 }
 
 .Controls>.Button {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 2rem;
-  width: 5rem;
+  width: 4rem;
   height: 3rem;
 }
 
 #Button_Cart>.Button {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .Number {
@@ -78,20 +98,42 @@
 }
 
 .CardItem {
-  background-color: red;
+  background-color: rgb(237, 237, 237);
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 20rem;
-  height: 25rem;
+  height: auto;
   border-radius: 0.5rem;
 }
 
+.Picture {
+  width: 15rem;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 img {
-  width: 5rem;
-  height: 5rem;
+  width: 100%;
+  height: auto;
+}
+
+.ItemFooter {
+  display: flex;
+}
+
+.Info-Cart {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  font-size: 2rem;
+  height: 3rem;
+  margin-bottom: 1rem;
 }
 
 .ItemFooter>.Option {
@@ -104,3 +146,94 @@ img {
   align-items: center;
 }
 
+.Cart-Zero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+}
+
+.CartItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  font-size: 2rem;
+}
+
+.checkout {
+  text-decoration: none;
+  color: red;
+  font-size: 2rem;
+}
+
+.checkout:hover {
+  text-decoration: underline;
+}
+
+.Button-clear {
+  font-size: 2rem;
+}
+
+
+#ContainerForm-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#ContainerForm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+}
+
+.Label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
