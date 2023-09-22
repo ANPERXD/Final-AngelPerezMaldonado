@@ -3,6 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { Timestamp, writeBatch, collection, documentId, where, query, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../../service/firebase/firebaseConfig";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
     const [loading, setLoading] = useState(false);
@@ -58,7 +59,17 @@ const Checkout = () => {
         return <h1>Generando orden...</h1>
     };
     if (orderId) {
-        return <h1>El id de su orden es: {orderId}</h1>
+        return (
+            <div className="containerTy">
+                <h2 className="thankYou">Gracias por comprar en Ecommerce-Anper</h2>
+                <h2 className="orderId">El id de su orden es: {orderId}</h2>
+                <p>
+                    <Link to="/" className="homeLink">
+                        Vuelta al home si lo desea
+                    </Link>
+                </p>
+            </div>
+        )
     };
     return (
         <div id="RegisterAcount">
