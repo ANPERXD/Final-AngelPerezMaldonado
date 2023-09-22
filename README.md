@@ -30,6 +30,48 @@ Una vez que se hayan instalado todas las dependencias, puedes iniciar la aplicac
 ```bash
 npm start
 ```
+## Capturas de Pantalla
+
+A continuación, encontrarás algunas capturas de pantalla que muestran diferentes partes de la aplicación Ecommerce-anper:
+
+### Página de Inicio (Home)
+
+En la página de inicio, los usuarios pueden observar una imagen de entrada que les da la bienvenida:
+
+![image](https://github.com/ANPERXD/Final-AngelPerezMaldonado/assets/123574050/201c8622-f00b-4ffe-b0e9-cd10e89e22ec)
+
+y explorar una variedad de productos disponibles en la tienda.
+
+![image](https://github.com/ANPERXD/Final-AngelPerezMaldonado/assets/123574050/a9255f38-559c-4e83-9aa4-ea1f67931180)
+
+# Como se puede notar, en la parte superior de la página hay tres categorías que permiten la interacción con el usuario.
+
+#### Categoría 1 : Celulares
+
+
+
+En esta categoría, los usuarios pueden encontrar productos relacionados con la categoría 1.
+
+#### Categoría 2 : Tablets
+
+
+
+La categoría 2 ofrece una selección de productos específicos relacionados con esta categoría.
+
+#### Categoría 3 : Notebooks
+
+
+
+Los usuarios pueden explorar productos relacionados con la categoría 3 en esta sección.
+
+### Carrito de Compras
+
+
+
+Aquí se muestra el carrito de compras, donde los usuarios pueden revisar y confirmar los productos que desean comprar.
+
+Estas capturas de pantalla proporcionan una visión general de la interfaz de usuario de Ecommerce-anper y cómo los usuarios pueden interactuar con la aplicación.
+
 ## Contribuciones
 Si deseas contribuir al desarrollo de esta aplicación, ¡estamos abiertos a colaboraciones! Siéntete libre de crear issues o enviar pull requests.
 
